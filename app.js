@@ -15,12 +15,6 @@ app.use(express.json());
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 
-/*
-app.get('/', (req, res) => {
-  res.send('Servicio web para clasificación de arboles')
-});
-*/
-
 const predictRouter = require('./routes/predict.route')
 app.use('/api/predict', predictRouter);
 
